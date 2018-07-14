@@ -1,0 +1,23 @@
+---
+- name: < pause to complete boot >
+  pause:
+    seconds: 5
+
+- name: < configure system settings >
+  nxos_system:
+    host: "{{ mgmt_ip }}"  # deprecated
+    port: "{{ ssh_port }}"  # deprecated
+    username: "{{ username }}"  # deprecated
+    password: "{{ password }}"  # deprecated
+    transport: cli  # deprecated
+    hostname: "{{ hostname }}"
+
+- name: < enable nx-api >
+  nxos_feature:
+    host: "{{ mgmt_ip }}"
+    port: "{{ ssh_port }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    transport: cli
+    feature: nxapi
+    state: enabled

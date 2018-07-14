@@ -1,0 +1,9 @@
+---
+mgmt_ip: 127.0.0.1
+ssh_port: 2222
+http_port: 8080
+https_port: 8081
+netconf_port: 8082
+username: vagrant
+password: vagrant
+hostname: nxos

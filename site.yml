@@ -1,0 +1,6 @@
+---
+- name: < provision nx-os >
+  hosts: network
+  connection: local
+  roles:
+    - network
